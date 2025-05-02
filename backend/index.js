@@ -1,5 +1,5 @@
 const express = require('express');
-const cors = require('cors');
+const cors = require('cors'); //CORS para permitir solicitudes de diferentes dominios
 const connectDB = require('./config/db');
 const alumnosRoutes = require('./routes/alumnos');
 require('dotenv').config();
@@ -10,9 +10,9 @@ const app = express();
 connectDB();
 
 // Middleware CORS para permitir solicitudes de cualquier origen
-app.use(cors()); // Si solo quieres permitir ciertos orígenes, configura el origin
+app.use(cors()); 
 
-// Middleware para parsear el cuerpo de la solicitud
+// Middleware para analizar el cuerpo de las solicitudes JSON
 app.use(express.json());
 
 // Rutas

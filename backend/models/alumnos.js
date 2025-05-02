@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose'); //importa la libreria mongoose
 
-const alumnoSchema = new mongoose.Schema({
+const alumnoSchema = new mongoose.Schema({ //define el esquema de los alumnos
   nombreAlumno: { type: String, required: true },
   edad: { type: String, required: true },
   gradoInteresado: { type: String, required: true },

@@ -1,5 +1,5 @@
 const asyncHandler = require("express-async-handler"); // Middleware para manejar errores asincrónicos
-const Alumno = require("./models/alumnos"); // Importa el modelo de Alumno
+const Alumno = require("../models/alumnos"); // Importa el modelo de Alumno
 
 // Obtener todos los alumnos
 const getAlumnos = asyncHandler(async (req, res) => {

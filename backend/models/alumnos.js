@@ -8,8 +8,8 @@ const alumnoSchema = new mongoose.Schema({ //define el esquema de los alumnos
   nombreTutor: { type: String, required: true },
   ocupacionTutor: { type: String },
   telefonoTutor: { type: String, required: true },
-  emailTutor: { type: String, required: true },
-  inscritoAntes: { type: String, required: true }
+  emailTutor: { type: String, required: true,  match: [/^\S+@\S+\.\S+$/, "Email no válido"] },
+  inscritoAntes: { type: Boolean, required: true } // Cambié el tipo de dato a Boolean
 });
 
 module.exports = mongoose.model('Alumno', alumnoSchema);
